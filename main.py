@@ -4,6 +4,11 @@ import io
 
 app = Flask(__name__)
 
+@app.route('/')
+def health_check():
+    return "Server is running"
+
+
 @app.route('/convert', methods=['POST'])
 def convert_text_to_speech():
     data = request.get_json()
