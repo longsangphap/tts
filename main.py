@@ -26,7 +26,7 @@ def convert_text_to_speech():
     mp3_file.seek(0)  # Đặt lại con trỏ tệp về đầu
 
     # Trả về file MP3 dưới dạng đính kèm
-    return send_file(mp3_file, mimetype='audio/mpeg', as_attachment=True, attachment_filename='output.mp3')
+    return send_file(mp3_file, mimetype='audio/mpeg', as_attachment=True, download_name='output.mp3')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
